@@ -1,0 +1,242 @@
+[
+  {
+    "id": "caribe-001",
+    "nombre": "Parque Nacional Cahuita",
+    "region": "CRL",
+    "descripcion": "El Parque Nacional Cahuita protege uno de los arrecifes de coral más importantes del Caribe costarricense. Con 1,102 hectáreas terrestres y 23,290 hectáreas marinas, ofrece senderos costeros de 8 km entre playas de arena blanca, aguas turquesas y una biodiversidad fascinante: monos, perezosos, serpientes e infinidad de aves. La entrada por el sector de Cahuita es gratuita (donación voluntaria) y el recorrido combina selva tropical con playas paradisíacas donde se puede practicar snorkel guiado sobre el arrecife coralino.",
+    "imagen_portada": "assets/img/caribe/cahuita.jpg",
+    "galeria": [
+      "assets/img/caribe/cahuita-sendero.jpg",
+      "assets/img/caribe/cahuita-playa-blanca.jpg",
+      "assets/img/caribe/cahuita-arrecife.jpg",
+      "assets/img/caribe/cahuita-mono.jpg"
+    ],
+    "audio": "assets/audio/cahuita-guia.mp3",
+    "video": "assets/video/cahuita.mp4",
+    "actividades": ["Snorkel", "Senderismo", "Observación de fauna", "Fotografía", "Natación"],
+    "lat": 9.7369,
+    "lng": -82.8411,
+    "cx": 815,
+    "cy": 330
+  },
+  {
+    "id": "caribe-002",
+    "nombre": "Puerto Viejo de Talamanca",
+    "region": "CRL",
+    "descripcion": "Puerto Viejo de Talamanca es el corazón del Caribe Sur costarricense, un pueblo vibrante que fusiona la cultura afrocaribeña con la costarricense e indígena Bribri. Rodeado de playas espectaculares como Playa Cocles, Punta Uva y Playa Chiquita, ofrece desde surf de clase mundial en la famosa ola Salsa Brava hasta snorkel en aguas cristalinas. La gastronomía local destaca con el rice and beans, pollo caribeño y la música calypso que suena por sus calles de tierra. Es punto de partida hacia el Refugio Nacional Gandoca-Manzanillo y las reservas indígenas Bribri.",
+    "imagen_portada": "assets/img/caribe/puerto-viejo.jpg",
+    "galeria": [
+      "assets/img/caribe/puerto-viejo-playa-cocles.jpg",
+      "assets/img/caribe/puerto-viejo-punta-uva.jpg",
+      "assets/img/caribe/puerto-viejo-pueblo.jpg",
+      "assets/img/caribe/puerto-viejo-bicicleta.jpg"
+    ],
+    "audio": "assets/audio/puerto-viejo-guia.mp3",
+    "video": "assets/video/puerto-viejo.mp4",
+    "actividades": ["Surf", "Snorkel", "Ciclismo", "Vida nocturna", "Gastronomía caribeña", "Cultura Bribri"],
+    "lat": 9.6545,
+    "lng": -82.7534,
+    "cx": 838,
+    "cy": 360
+  },
+  {
+    "id": "caribe-003",
+    "nombre": "Parque Nacional Tortuguero",
+    "region": "CRL",
+    "descripcion": "Conocido como el 'Amazonas de Costa Rica', Tortuguero es un laberinto de canales navegables rodeados de densa selva tropical. Es uno de los sitios más importantes del Caribe para el desove de tortugas marinas, incluyendo la tortuga verde en peligro de extinción. El acceso es únicamente por agua o aire, lo que mantiene su ambiente prístino. Los recorridos en bote permiten observar monos aulladores, caimanes, tucanes y una enorme variedad de aves. La temporada de anidación de tortugas va de julio a octubre.",
+    "imagen_portada": "assets/img/caribe/tortuguero.jpg",
+    "galeria": [
+      "assets/img/caribe/tortuguero-canales.jpg",
+      "assets/img/caribe/tortuguero-tortuga.jpg",
+      "assets/img/caribe/tortuguero-selva.jpg",
+      "assets/img/caribe/tortuguero-aves.jpg"
+    ],
+    "audio": "assets/audio/tortuguero-guia.mp3",
+    "video": "assets/video/tortuguero.mp4",
+    "actividades": ["Paseo en bote", "Observación de tortugas", "Observación de aves", "Kayak", "Senderismo nocturno"],
+    "lat": 10.5432,
+    "lng": -83.5024,
+    "cx": 748,
+    "cy": 218
+  },
+  {
+    "id": "guanacaste-001",
+    "nombre": "Playa Tamarindo",
+    "region": "CRG",
+    "descripcion": "Tamarindo es el epicentro de la cultura del surf en Costa Rica y una de las playas más famosas del país. Esta bahía de arena dorada y aguas cristalinas ofrece oleaje perfecto tanto para principiantes como para surfistas experimentados. Galardonada con el Premio Bandera Azul Ecológica, combina naturaleza con una vibrante vida nocturna, restaurantes de gastronomía internacional y cercanía al Parque Nacional Marino Las Baulas, donde anidan las tortugas baula, la especie de tortuga más grande del mundo. Los atardeceres aquí son simplemente espectaculares.",
+    "imagen_portada": "assets/img/guanacaste/tamarindo.jpg",
+    "galeria": [
+      "assets/img/guanacaste/tamarindo-surf.jpg",
+      "assets/img/guanacaste/tamarindo-atardecer.jpg",
+      "assets/img/guanacaste/tamarindo-playa.jpg",
+      "assets/img/guanacaste/tamarindo-tortuga-baula.jpg"
+    ],
+    "audio": "assets/audio/tamarindo-guia.mp3",
+    "video": "assets/video/tamarindo.mp4",
+    "actividades": ["Surf", "Kayak en manglares", "Observación de tortugas", "Pesca deportiva", "Vida nocturna", "Paseo a caballo"],
+    "lat": 10.2994,
+    "lng": -85.8375,
+    "cx": 205,
+    "cy": 228
+  },
+  {
+    "id": "guanacaste-002",
+    "nombre": "Parque Nacional Rincón de la Vieja",
+    "region": "CRG",
+    "descripcion": "El Parque Nacional Rincón de la Vieja protege un imponente macizo volcánico de 14,083 hectáreas con 9 conos volcánicos y la laguna Jilgueros. Dividido en dos sectores (Las Pailas y Santa María), ofrece senderos que atraviesan pozas de barro hirviente, fumarolas, aguas termales naturales y cascadas impresionantes como la Oropéndola, que cae en una poza de agua turquesa. La biodiversidad es extraordinaria: monos congo, tucanes, pizotes y el raro saltarín colilargo. Es parte del Área de Conservación Guanacaste, declarada Patrimonio de la Humanidad por la UNESCO.",
+    "imagen_portada": "assets/img/guanacaste/rincon-vieja.jpg",
+    "galeria": [
+      "assets/img/guanacaste/rincon-vieja-fumarolas.jpg",
+      "assets/img/guanacaste/rincon-vieja-cascada.jpg",
+      "assets/img/guanacaste/rincon-vieja-barro.jpg",
+      "assets/img/guanacaste/rincon-vieja-sendero.jpg"
+    ],
+    "audio": "assets/audio/rincon-vieja-guia.mp3",
+    "video": "assets/video/rincon-vieja.mp4",
+    "actividades": ["Senderismo", "Aguas termales", "Observación de fauna", "Fotografía volcánica", "Canopy"],
+    "lat": 10.8300,
+    "lng": -85.3240,
+    "cx": 310,
+    "cy": 128
+  },
+  {
+    "id": "guanacaste-003",
+    "nombre": "Playa Conchal",
+    "region": "CRG",
+    "descripcion": "Playa Conchal es una de las playas más curiosas y hermosas de Costa Rica: su arena está formada por millones de diminutas conchas trituradas que le dan un brillo único. Sus aguas cristalinas color turquesa son ideales para el snorkel, revelando una rica vida marina con peces tropicales y corales. Ubicada junto a Brasilito, es más tranquila que otras playas de Guanacaste y perfecta para quienes buscan un retiro con menos multitudes. Se puede llegar caminando desde Brasilito en unos 20 minutos por la costa.",
+    "imagen_portada": "assets/img/guanacaste/conchal.jpg",
+    "galeria": [
+      "assets/img/guanacaste/conchal-arena.jpg",
+      "assets/img/guanacaste/conchal-agua.jpg",
+      "assets/img/guanacaste/conchal-snorkel.jpg",
+      "assets/img/guanacaste/conchal-panoramica.jpg"
+    ],
+    "audio": "assets/audio/conchal-guia.mp3",
+    "video": "assets/video/conchal.mp4",
+    "actividades": ["Snorkel", "Natación", "Buceo", "Caminata costera", "Fotografía"],
+    "lat": 10.4076,
+    "lng": -85.8171,
+    "cx": 188,
+    "cy": 205
+  },
+  {
+    "id": "central-001",
+    "nombre": "Volcán Poás",
+    "region": "CRSJ",
+    "descripcion": "El Volcán Poás alberga uno de los cráteres activos más grandes del mundo, con 1.5 km de diámetro y 300 metros de profundidad. Ubicado a solo 60 km de San José, es uno de los volcanes más accesibles del país con senderos bien acondicionados aptos para todas las edades. Desde el mirador se aprecia el cráter humeante envuelto en nubes, y un sendero de 30 minutos a través de bosque nuboso lleva a la Laguna de Botos, formada en un antiguo cráter a 2,708 metros de altitud. El sendero Escalonia permite adentrarse en el corazón del bosque nuboso.",
+    "imagen_portada": "assets/img/central/volcan-poas.jpg",
+    "galeria": [
+      "assets/img/central/poas-crater.jpg",
+      "assets/img/central/poas-laguna-botos.jpg",
+      "assets/img/central/poas-bosque-nuboso.jpg",
+      "assets/img/central/poas-sendero.jpg"
+    ],
+    "audio": "assets/audio/volcan-poas-guia.mp3",
+    "video": "assets/video/volcan-poas.mp4",
+    "actividades": ["Senderismo", "Observación del cráter", "Fotografía", "Observación de aves", "Visita a cafetales"],
+    "lat": 10.1968,
+    "lng": -84.2306,
+    "cx": 560,
+    "cy": 245
+  },
+  {
+    "id": "central-002",
+    "nombre": "Valle de Orosi",
+    "region": "CRC",
+    "descripcion": "El Valle de Orosi es un verdadero Jardín del Edén enclavado a 9 km al sureste de Cartago. Este valle de exuberante belleza natural está surcado por ríos y aguas termales, y guarda tesoros históricos como la Iglesia de San José de Orosi (1743), una de las pocas construcciones coloniales bien conservadas del país, y las ruinas de Ujarrás del siglo XVI. Las mañanas despejadas revelan laderas cubiertas de vegetación bañadas por la luz del sol. Se pueden visitar balnearios de aguas termales, recorrer el lago Cachí en bote y explorar el Parque Nacional Tapantí, uno de los sitios más lluviosos del país.",
+    "imagen_portada": "assets/img/central/valle-orosi.jpg",
+    "galeria": [
+      "assets/img/central/orosi-iglesia.jpg",
+      "assets/img/central/orosi-ruinas-ujarras.jpg",
+      "assets/img/central/orosi-valle-panoramica.jpg",
+      "assets/img/central/orosi-aguas-termales.jpg"
+    ],
+    "audio": "assets/audio/valle-orosi-guia.mp3",
+    "video": "assets/video/valle-orosi.mp4",
+    "actividades": ["Aguas termales", "Ciclismo", "Paseo en bote", "Visita histórica", "Senderismo", "Pesca de truchas"],
+    "lat": 9.7978,
+    "lng": -83.8524,
+    "cx": 680,
+    "cy": 290
+  },
+  {
+    "id": "central-003",
+    "nombre": "Volcán Irazú",
+    "region": "CRC",
+    "descripcion": "El Volcán Irazú es el más alto de Costa Rica con 3,432 metros sobre el nivel del mar y uno de los 7 volcanes activos del país. Desde su cima, en días despejados, es posible divisar tanto el Océano Pacífico como el Mar Caribe. Su principal atracción es el cráter Diego de la Haya, en cuyo centro reposa un extraordinario lago de color verde de unos 300 metros de profundidad. El parque nacional protege 4 cráteres y 2 lagunas, y los alrededores ofrecen campos de flores ornamentales, cultivos de fresas y el Museo de Volcanes. Se encuentra a poco más de 30 km de Cartago.",
+    "imagen_portada": "assets/img/central/volcan-irazu.jpg",
+    "galeria": [
+      "assets/img/central/irazu-crater-verde.jpg",
+      "assets/img/central/irazu-panoramica.jpg",
+      "assets/img/central/irazu-sendero.jpg",
+      "assets/img/central/irazu-flora.jpg"
+    ],
+    "audio": "assets/audio/volcan-irazu-guia.mp3",
+    "video": "assets/video/volcan-irazu.mp4",
+    "actividades": ["Senderismo", "Fotografía", "Observación del cráter", "Visita a cultivos de fresas", "Mirador panorámico"],
+    "lat": 9.9792,
+    "lng": -83.8521,
+    "cx": 700,
+    "cy": 255
+  },
+  {
+    "id": "pacifico-sur-001",
+    "nombre": "Parque Nacional Manuel Antonio",
+    "region": "CRP",
+    "descripcion": "Manuel Antonio es el parque nacional más pequeño de Costa Rica pero uno de los más biodiversos y visitados del mundo. Fue incluido por Forbes entre los 12 parques nacionales más hermosos del planeta. Con solo 1,983 hectáreas, alberga más de 109 especies de mamíferos y 184 de aves. Sus senderos de fácil recorrido (unos 3 km) serpentean entre bosque tropical lluvioso y desembocan en playas de arena blanca rodeadas de selva. Monos carablanca, perezosos, mapaches e iguanas son avistamientos frecuentes. Ubicado junto a Quepos, a unas 3 horas de San José.",
+    "imagen_portada": "assets/img/pacifico-sur/manuel-antonio.jpg",
+    "galeria": [
+      "assets/img/pacifico-sur/manuel-antonio-playa.jpg",
+      "assets/img/pacifico-sur/manuel-antonio-mono.jpg",
+      "assets/img/pacifico-sur/manuel-antonio-sendero.jpg",
+      "assets/img/pacifico-sur/manuel-antonio-vista-aerea.jpg"
+    ],
+    "audio": "assets/audio/manuel-antonio-guia.mp3",
+    "video": "assets/video/manuel-antonio.mp4",
+    "actividades": ["Senderismo", "Natación", "Observación de fauna", "Snorkel", "Kayak", "Pesca deportiva"],
+    "lat": 9.3920,
+    "lng": -84.1369,
+    "cx": 498,
+    "cy": 430
+  },
+  {
+    "id": "pacifico-sur-002",
+    "nombre": "Uvita — Parque Nacional Marino Ballena",
+    "region": "CRP",
+    "descripcion": "Uvita es hogar del Parque Nacional Marino Ballena, famoso por su tómbolo natural: una formación de arena que durante la marea baja dibuja la silueta de una cola de ballena, un fenómeno 100% natural visible desde el aire. Con 171 hectáreas terrestres y 15 km de franja costera dividida en 4 sectores (Uvita, Colonia, Ballena y Piñuelas), es el destino por excelencia para el avistamiento de ballenas jorobadas. La temporada va de julio a noviembre y de diciembre a abril. En los alrededores se encuentran las espectaculares Cataratas Nauyaca, con caídas de 45 metros rodeadas de vegetación exuberante.",
+    "imagen_portada": "assets/img/pacifico-sur/uvita.jpg",
+    "galeria": [
+      "assets/img/pacifico-sur/uvita-cola-ballena.jpg",
+      "assets/img/pacifico-sur/uvita-ballena-jorobada.jpg",
+      "assets/img/pacifico-sur/uvita-cataratas-nauyaca.jpg",
+      "assets/img/pacifico-sur/uvita-playa.jpg"
+    ],
+    "audio": "assets/audio/uvita-guia.mp3",
+    "video": "assets/video/uvita.mp4",
+    "actividades": ["Avistamiento de ballenas", "Snorkel", "Surf", "Kayak", "Caminata al tómbolo", "Canyoning"],
+    "lat": 9.1636,
+    "lng": -83.7356,
+    "cx": 530,
+    "cy": 478
+  },
+  {
+    "id": "pacifico-sur-003",
+    "nombre": "Bahía Drake y Parque Nacional Corcovado",
+    "region": "CRP",
+    "descripcion": "National Geographic describió a Corcovado como 'el lugar biológicamente más intenso del planeta'. Ubicado en la Península de Osa, este parque nacional es el último gran reducto de selva tropical virgen en el Pacífico centroamericano. Se accede principalmente desde Bahía Drake, un enclave remoto rodeado de playas salvajes y naturaleza prístina. Aquí habitan las cuatro especies de monos de Costa Rica, tapires, jaguares, guacamayas rojas y una biodiversidad sin igual. Cerca se encuentra la Isla del Caño, uno de los mejores sitios de buceo y snorkel del país con aguas de visibilidad excepcional.",
+    "imagen_portada": "assets/img/pacifico-sur/corcovado.jpg",
+    "galeria": [
+      "assets/img/pacifico-sur/corcovado-selva.jpg",
+      "assets/img/pacifico-sur/corcovado-guacamaya.jpg",
+      "assets/img/pacifico-sur/corcovado-playa.jpg",
+      "assets/img/pacifico-sur/bahia-drake-isla-cano.jpg"
+    ],
+    "audio": "assets/audio/corcovado-guia.mp3",
+    "video": "assets/video/corcovado.mp4",
+    "actividades": ["Senderismo", "Buceo", "Snorkel", "Observación de fauna", "Kayak", "Fotografía de naturaleza"],
+    "lat": 8.5338,
+    "lng": -83.5851,
+    "cx": 610,
+    "cy": 530
+  }
+]

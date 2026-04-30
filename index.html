@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdant | Guía Turística de Costa Rica</title>
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Estilos Globales -->
+  <link rel="stylesheet" href="./src/styles/global.css">
+
+  <!-- Componentes Web -->
+  <script type="module" src="./src/components/layout/hero-section.js"></script>
+  <script type="module" src="./src/components/features/interactive-map/interactive-map.js"></script>
+  <script type="module" src="./src/components/features/destination-modal.js"></script>
+  <script type="module" src="./src/components/layout/app-header.js"></script>
+</head>
+<body>
+
+  <!-- App Header Web Component -->
+  <app-header></app-header>
+
+  <!-- Contenido Principal -->
+  <main style="padding-top: 60px;"> <!-- padding top for fixed nav -->
+    
+    <!-- Hero Component -->
+    <hero-section></hero-section>
+
+    <!-- Map Component -->
+    <section class="container" style="padding-top: var(--spacing-16); padding-bottom: var(--spacing-16);">
+      <!-- Título de sección superpuesto al área del mapa -->
+      <div style="text-align: center; margin-bottom: var(--spacing-8);">
+        <h2 class="headline" style="font-size: var(--text-display-md); color: #fff; margin-bottom: var(--spacing-2);">Explora el País</h2>
+        <p style="color: var(--color-primary); letter-spacing: 0.15em; text-transform: uppercase; font-size: var(--text-body-sm);">Descubre maravillas ocultas</p>
+      </div>
+      
+      <interactive-map style="max-width: 920px; margin: 0 auto; display: block;"></interactive-map>
+    </section>
+
+  </main>
+
+  <footer style="background-color: var(--color-surface-lowest); padding: var(--spacing-12) 0;">
+    <div class="container" style="text-align: center; color: var(--color-on-surface-variant); font-size: var(--text-body-sm);">
+      <p>&copy; 2026 Verdant Curator. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Global de Destino -->
+  <destination-modal id="app-modal"></destination-modal>
+
+  <script>
+    // Event listener global para el Mapa Interactivo y Modal de Destino
+    document.addEventListener('show-destination-details', (e) => {
+      const modal = document.getElementById('app-modal');
+      if (modal && e.detail && e.detail.destino) {
+        modal.destino = e.detail.destino; // Envía los datos
+        modal.open(); // Llama al método de apertura
+      }
+    });
+  </script>
+</body>
+</html>

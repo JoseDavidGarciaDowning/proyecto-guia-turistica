@@ -1,0 +1,5 @@
+node_modules/
+*.py
+antigravity/
+guia_interactive_map.md 
+guia_web_components.md 
