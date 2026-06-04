@@ -71,7 +71,7 @@
       "assets/img/guanacaste/tamarindo-playa.jpg",
       "assets/img/guanacaste/tamarindo-tortuga-baula.jpg"
     ],
-    "audio": "assets/audio/Guanacaste/playa.mp3",
+    "audio": "assets/audio/playa.mp3",
     "video": "assets/video/tamarindo.mp4",
     "actividades": ["Surf", "Kayak en manglares", "Observación de tortugas", "Pesca deportiva", "Vida nocturna", "Paseo a caballo"],
     "lat": 10.2994,
@@ -91,7 +91,7 @@
       "assets/img/guanacaste/rincon-vieja-barro.jpg",
       "assets/img/guanacaste/rincon-vieja-sendero.jpg"
     ],
-    "audio": "assets/audio/Guanacaste/Bosque.mp3",
+    "audio": "assets/audio/Bosque.mp3",
     "video": "assets/video/rincon-vieja.mp4",
     "actividades": ["Senderismo", "Aguas termales", "Observación de fauna", "Fotografía volcánica", "Canopy"],
     "lat": 10.8300,
@@ -111,7 +111,7 @@
       "assets/img/guanacaste/conchal-snorkel.jpg",
       "assets/img/guanacaste/conchal-panoramica.jpg"
     ],
-    "audio": "assets/audio/Guanacaste/playa.mp3",
+    "audio": "assets/audio/playa.mp3",
     "video": "assets/video/conchal.mp4",
     "actividades": ["Snorkel", "Natación", "Buceo", "Caminata costera", "Fotografía"],
     "lat": 10.4076,
