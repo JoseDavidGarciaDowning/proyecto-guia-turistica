@@ -72,8 +72,9 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.6) 0%,
-    rgba(2, 44, 25, 0.4) 50%,
-    rgba(2, 44, 25, 0.95) 85%,
+    rgba(2, 44, 25, 0.25) 45%,
+    rgba(2, 44, 25, 0.5) 72%,
+    rgba(2, 44, 25, 0.82) 92%,
     var(--color-hero-deep) 100% /* Cierra en verde sólido = misma costura que .section-hero-fade */
   );
 }
