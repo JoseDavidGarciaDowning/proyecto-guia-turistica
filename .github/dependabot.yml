@@ -1,0 +1,17 @@
+# Dependabot mantiene los SHAs de las GitHub Actions actualizados.
+# Como pineamos las actions por SHA (inmutable, seguro), sin esto quedaríamos
+# congelados sin recibir parches. Dependabot abre un PR cuando hay versión nueva,
+# moviendo el SHA y dejando el comentario con el tag — vos revisás y mergeás.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    groups:
+      # Agrupa todas las actualizaciones de actions en un solo PR para revisar de una.
+      github-actions:
+        patterns:
+          - "*"
