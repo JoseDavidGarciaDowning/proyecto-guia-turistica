@@ -1,56 +1,123 @@
 export default class DestinationModal extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
     this._destino = null;
     this._currentImageIndex = 0;
+    this._audioPlayed = false;
+    this._audioElement = null;
+    this._audioTimeoutId = null;
   }
 
   set destino(data) {
     this._destino = data;
     this._currentImageIndex = 0;
+    this._audioPlayed = false;
     this.render();
   }
 
   open() {
-    const overlay = this.shadowRoot.getElementById('modal-overlay');
+    const overlay = this.shadowRoot.getElementById("modal-overlay");
     if (overlay) {
-      overlay.classList.add('visible');
-      this.shadowRoot.getElementById('close-btn')?.focus();
-      document.body.style.overflow = 'hidden';
+      overlay.classList.add("visible");
+      this.shadowRoot.getElementById("close-btn")?.focus();
+      document.body.style.overflow = "hidden";
+
+      // Reproducir audio solo una vez con mejores prácticas
+      if (!this._audioPlayed && this._destino?.audio) {
+        this._playAudio();
+      }
     }
+  }
+  _playAudio() {
+    this._audioPlayed = true;
+    const audioElement = this.shadowRoot.getElementById("destination-audio");
+
+    if (!audioElement) return;
+    if (this._audioTimeoutId) {
+      clearTimeout(this._audioTimeoutId);
+      this._audioTimeoutId = null;
+    }
+
+    // Usar requestAnimationFrame para no bloquear el thread principal
+    requestAnimationFrame(() => {
+      audioElement.currentTime = 0;
+      const playPromise = audioElement.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          // El navegador puede bloquear la reproducción automática
+          console.warn(
+            `Audio no se reprodujo automáticamente para ${this._destino?.nombre}:`,
+            error.message,
+          );
+        });
+      }
+
+      // Limitar la reproducción a un tiempo fijo para evitar audios muy largos
+      const FIXED_AUDIO_DURATION_MS = 4000; // 4 segundos
+      this._audioTimeoutId = setTimeout(() => {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+        this._audioTimeoutId = null;
+      }, FIXED_AUDIO_DURATION_MS);
+    });
   }
 
   close() {
-    const overlay = this.shadowRoot.getElementById('modal-overlay');
+    const overlay = this.shadowRoot.getElementById("modal-overlay");
     if (overlay) {
-      overlay.classList.remove('visible');
-      document.body.style.overflow = '';
-      
+      overlay.classList.remove("visible");
+      document.body.style.overflow = "";
+
       // Stop media from playing when closed
-      const video = this.shadowRoot.querySelector('video');
+      const video = this.shadowRoot.querySelector("video");
       if (video) {
         video.pause();
+      }
+
+      // Detener audio
+      const audio = this.shadowRoot.querySelector("audio");
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      if (this._audioTimeoutId) {
+        clearTimeout(this._audioTimeoutId);
+        this._audioTimeoutId = null;
       }
     }
   }
 
   nextImage() {
-    if (!this._destino || !this._destino.galeria || this._destino.galeria.length <= 1) return;
-    this._currentImageIndex = (this._currentImageIndex + 1) % this._destino.galeria.length;
+    if (
+      !this._destino ||
+      !this._destino.galeria ||
+      this._destino.galeria.length <= 1
+    )
+      return;
+    this._currentImageIndex =
+      (this._currentImageIndex + 1) % this._destino.galeria.length;
     this.updateImage();
   }
 
   prevImage() {
-    if (!this._destino || !this._destino.galeria || this._destino.galeria.length <= 1) return;
-    this._currentImageIndex = (this._currentImageIndex - 1 + this._destino.galeria.length) % this._destino.galeria.length;
+    if (
+      !this._destino ||
+      !this._destino.galeria ||
+      this._destino.galeria.length <= 1
+    )
+      return;
+    this._currentImageIndex =
+      (this._currentImageIndex - 1 + this._destino.galeria.length) %
+      this._destino.galeria.length;
     this.updateImage();
   }
 
   updateImage() {
-    const img = this.shadowRoot.getElementById('gallery-img');
-    const dots = this.shadowRoot.querySelectorAll('.dot');
-    
+    const img = this.shadowRoot.getElementById("gallery-img");
+    const dots = this.shadowRoot.querySelectorAll(".dot");
+
     if (img) {
       img.style.opacity = 0;
       setTimeout(() => {
@@ -58,10 +125,10 @@ export default class DestinationModal extends HTMLElement {
         img.style.opacity = 1;
       }, 200);
     }
-    
+
     if (dots.length > 0) {
       dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === this._currentImageIndex);
+        dot.classList.toggle("active", index === this._currentImageIndex);
       });
     }
   }
@@ -70,18 +137,24 @@ export default class DestinationModal extends HTMLElement {
     if (!this._destino) return;
     const d = this._destino;
 
-    const badges = (d.actividades || []).map(act => 
-      `<span class="badge">${act}</span>`
-    ).join('');
-    
-    let dotsHtml = '';
+    const badges = (d.actividades || [])
+      .map((act) => `<span class="badge">${act}</span>`)
+      .join("");
+
+    let dotsHtml = "";
     if (d.galeria && d.galeria.length > 1) {
-      dotsHtml = `<div class="gallery-dots">` + 
-                 d.galeria.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-idx="${i}"></span>`).join('') +
-                 `</div>`;
+      dotsHtml =
+        `<div class="gallery-dots">` +
+        d.galeria
+          .map(
+            (_, i) =>
+              `<span class="dot ${i === 0 ? "active" : ""}" data-idx="${i}"></span>`,
+          )
+          .join("") +
+        `</div>`;
     }
 
-    this.shadowRoot.innerHTML = /*html*/`
+    this.shadowRoot.setHTMLUnsafe(/*html*/ `
       <style>
         :host {
           --modal-bg: var(--color-surface-dim, #131b16);
@@ -264,14 +337,18 @@ export default class DestinationModal extends HTMLElement {
         <div class="modal">
           
           <div class="gallery">
-             <img src="${(d.galeria && d.galeria.length > 0) ? d.galeria[0] : (d.imagen_portada || '')}" id="gallery-img" alt="${d.nombre}">
-             ${(d.galeria && d.galeria.length > 1) ? `
+             <img src="${d.galeria && d.galeria.length > 0 ? d.galeria[0] : d.imagen_portada || ""}" id="gallery-img" alt="${d.nombre}">
+             ${
+               d.galeria && d.galeria.length > 1
+                 ? `
              <div class="gallery-controls">
                 <button class="control-btn" id="prev-btn" aria-label="Anterior imagen">❮</button>
                 <button class="control-btn" id="next-btn" aria-label="Siguiente imagen">❯</button>
              </div>
              ${dotsHtml}
-             ` : ''}
+             `
+                 : ""
+             }
           </div>
           
           <div class="content-wrap">
@@ -284,15 +361,15 @@ export default class DestinationModal extends HTMLElement {
               <div class="badges">${badges}</div>
             </div>
             <div class="body">
-              <p>${d.descripcion || 'Sin descripción disponible.'}</p>
+              <p>${d.descripcion || "Sin descripción disponible."}</p>
               
               <div class="video-section">
                 <h3 class="video-title">Explora en Video</h3>
                 <div class="video-wrapper">
                   <!-- Usa el video del JSON si existe, de lo contrario usa un MP4 dummy -->
                   <video id="dest-video" controls preload="none" 
-                    src="${d.video || 'https://www.w3schools.com/html/mov_bbb.mp4'}" 
-                    poster="${d.imagen_portada || ''}"
+                    src="${d.video || "https://www.w3schools.com/html/mov_bbb.mp4"}" 
+                    poster="${d.imagen_portada || ""}"
                     aria-label="Video del destino ${d.nombre}">
                     Tu navegador no soporta el etiquetado de video.
                   </video>
@@ -304,39 +381,55 @@ export default class DestinationModal extends HTMLElement {
           
         </div>
       </div>
-    `;
+      <!-- Audio Element: Hidden, plays only once when modal opens -->
+      ${d.audio ? `<audio id="destination-audio" preload="metadata">
+        <source src="${d.audio}" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>` : ''}
+      
+    `);
 
     // Event Bindings
-    this.shadowRoot.getElementById('close-btn').addEventListener('click', () => this.close());
-    
-    this.shadowRoot.getElementById('modal-overlay').addEventListener('click', (e) => {
-        if (e.target.id === 'modal-overlay') this.close();
-    });
+    this.shadowRoot
+      .getElementById("close-btn")
+      .addEventListener("click", () => this.close());
+
+    this.shadowRoot
+      .getElementById("modal-overlay")
+      .addEventListener("click", (e) => {
+        if (e.target.id === "modal-overlay") this.close();
+      });
 
     if (d.galeria && d.galeria.length > 1) {
-        this.shadowRoot.getElementById('next-btn').addEventListener('click', () => this.nextImage());
-        this.shadowRoot.getElementById('prev-btn').addEventListener('click', () => this.prevImage());
-        
-        // Dots interaction
-        this.shadowRoot.querySelectorAll('.dot').forEach((dot) => {
-          dot.addEventListener('click', (e) => {
-            const idx = parseInt(e.target.getAttribute('data-idx'));
-            if (!isNaN(idx)) {
-              this._currentImageIndex = idx;
-              this.updateImage();
-            }
-          });
+      this.shadowRoot
+        .getElementById("next-btn")
+        .addEventListener("click", () => this.nextImage());
+      this.shadowRoot
+        .getElementById("prev-btn")
+        .addEventListener("click", () => this.prevImage());
+
+      // Dots interaction
+      this.shadowRoot.querySelectorAll(".dot").forEach((dot) => {
+        dot.addEventListener("click", (e) => {
+          const idx = parseInt(e.target.getAttribute("data-idx"));
+          if (!isNaN(idx)) {
+            this._currentImageIndex = idx;
+            this.updateImage();
+          }
         });
+      });
     }
-    
+
     // Video Fallback: Si el video del JSon no existe localmente (error 404), usa el dummy publico
-    const videoEl = this.shadowRoot.getElementById('dest-video');
+    const videoEl = this.shadowRoot.getElementById("dest-video");
     if (videoEl) {
-      videoEl.addEventListener('error', () => {
+      videoEl.addEventListener("error", () => {
         // Para asegurar compatibilidad extra con Safari y evitar bucles
-        if (!videoEl.src.includes('w3schools.com')) {
-          console.warn('Video local no encontrado, cargando video de respaldo.');
-          videoEl.src = 'https://www.w3schools.com/html/mov_bbb.mp4';
+        if (!videoEl.src.includes("w3schools.com")) {
+          console.warn(
+            "Video local no encontrado, cargando video de respaldo.",
+          );
+          videoEl.src = "https://www.w3schools.com/html/mov_bbb.mp4";
         }
       });
     }
@@ -344,25 +437,30 @@ export default class DestinationModal extends HTMLElement {
     // Single global keyboard handler bound to window to make sure we catch Escape regardless of focus
     if (!this._keydownHandler) {
       this._keydownHandler = (e) => {
-        if (!this.shadowRoot.getElementById('modal-overlay').classList.contains('visible')) return;
-        
-        if (e.key === 'Escape') {
+        if (
+          !this.shadowRoot
+            .getElementById("modal-overlay")
+            .classList.contains("visible")
+        )
+          return;
+
+        if (e.key === "Escape") {
           this.close();
-        } else if (e.key === 'ArrowRight') {
+        } else if (e.key === "ArrowRight") {
           this.nextImage();
-        } else if (e.key === 'ArrowLeft') {
+        } else if (e.key === "ArrowLeft") {
           this.prevImage();
         }
       };
-      window.addEventListener('keydown', this._keydownHandler);
+      window.addEventListener("keydown", this._keydownHandler);
     }
   }
-  
+
   disconnectedCallback() {
-      if (this._keydownHandler) {
-          window.removeEventListener('keydown', this._keydownHandler);
-      }
+    if (this._keydownHandler) {
+      window.removeEventListener("keydown", this._keydownHandler);
+    }
   }
 }
 
-customElements.define('destination-modal', DestinationModal);
+customElements.define("destination-modal", DestinationModal);

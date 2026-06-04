@@ -11,7 +11,7 @@ export class AppHeader extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = html`
+    this.shadowRoot.setHTMLUnsafe(html`
       <style>
         /* Importamos las variables globales */
         @import url('./src/styles/global.css');
@@ -94,7 +94,7 @@ export class AppHeader extends HTMLElement {
           <button class="btn-primary">Planea tu viaje</button>
         </div>
       </nav>
-    `;
+    `);
   }
 }
 

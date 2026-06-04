@@ -27,21 +27,21 @@ export class BaseButton extends HTMLElement {
 
     // Si tiene href, renderizamos un link; si no, un botón.
     if (href) {
-      this.shadowRoot.innerHTML = html`
+      this.shadowRoot.setHTMLUnsafe(html`
         <style>@import url('./src/styles/components/shared.css');</style>
         <style>@import url('./src/styles/components/button.css');</style>
         <a href="${href}" class="${className}" part="button">
           <slot></slot>
         </a>
-      `;
+      `);
     } else {
-      this.shadowRoot.innerHTML = html`
+      this.shadowRoot.setHTMLUnsafe(html`
         <style>@import url('./src/styles/components/shared.css');</style>
         <style>@import url('./src/styles/components/button.css');</style>
         <button class="${className}" part="button">
           <slot></slot>
         </button>
-      `;
+      `);
     }
   }
 }

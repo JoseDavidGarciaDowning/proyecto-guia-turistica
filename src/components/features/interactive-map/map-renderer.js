@@ -4,10 +4,10 @@ export class MapRenderer {
   }
 
   render() {
-    this.map.shadowRoot.innerHTML = /*html*/`
+    this.map.shadowRoot.setHTMLUnsafe(/*html*/`
       <style>${this._css()}</style>
       ${this._html()}
-    `;
+    `);
   }
 
   _html() {

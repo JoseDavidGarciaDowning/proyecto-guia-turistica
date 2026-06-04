@@ -13,7 +13,7 @@ export class HeroSection extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = /*html*/ `
+    this.shadowRoot.setHTMLUnsafe(/*html*/ `
       <style>@import url('./src/styles/components/shared.css');</style>
       <style>@import url('./src/styles/components/hero.css');</style>
       <div class="hero">
@@ -72,7 +72,7 @@ export class HeroSection extends HTMLElement {
           </div>
         </div>
       </div>
-    `;
+    `);
   }
 }
 

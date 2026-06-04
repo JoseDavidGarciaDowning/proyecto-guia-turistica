@@ -23,7 +23,7 @@ if (match) {
       const res = await fetch('./data/destinos.json');
       this._destinos = await res.json();
     } catch(e) { console.error('Error loading destinos', e); }
-    this.shadowRoot.innerHTML = \`<style>\${this._css()}</style>\${this._html()}\`;
+    this.shadowRoot.setHTMLUnsafe(\`<style>\${this._css()}</style>\${this._html()}\`);
     this._bindAll();
   }
 `);
