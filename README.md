@@ -2,6 +2,7 @@
 
 Este proyecto consiste en una guía turística interactiva desarrollada en JavaScript por el Grupo 3 del curso de Multimedios de la carrera de Informática Empresarial, en la Universidad de Costa Rica (Sede Guanacaste), durante el ciclo I-2026. La aplicación utiliza ES Modules y una arquitectura modular basada en componentes.
 
+
 ## Requisitos
 
 * Node.js (recomendado v16 o superior)
@@ -66,3 +67,5 @@ Este proyecto utiliza **servor** como servidor de desarrollo estático.
 ## Créditos
 
 Consulta el archivo CREDITOS.md para información sobre autores y recursos utilizados.
+
+*  esto es una prueba del code review
