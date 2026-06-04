@@ -11,7 +11,7 @@
       "assets/img/caribe/cahuita-arrecife.jpg",
       "assets/img/caribe/cahuita-mono.jpg"
     ],
-    "audio": "assets/audio/cahuita-guia.mp3",
+    "audio": "assets/audio//Caribe/cahuita.mp3",
     "video": "assets/video/cahuita.mp4",
     "actividades": ["Snorkel", "Senderismo", "Observación de fauna", "Fotografía", "Natación"],
     "lat": 9.7369,
@@ -31,7 +31,7 @@
       "assets/img/caribe/puerto-viejo-pueblo.jpg",
       "assets/img/caribe/puerto-viejo-bicicleta.jpg"
     ],
-    "audio": "assets/audio/puerto-viejo-guia.mp3",
+    "audio": "assets/audio//Caribe/puerto-viejo.mp3",
     "video": "assets/video/puerto-viejo.mp4",
     "actividades": ["Surf", "Snorkel", "Ciclismo", "Vida nocturna", "Gastronomía caribeña", "Cultura Bribri"],
     "lat": 9.6545,
@@ -51,7 +51,7 @@
       "assets/img/caribe/tortuguero-selva.jpg",
       "assets/img/caribe/tortuguero-aves.jpg"
     ],
-    "audio": "assets/audio/tortuguero-guia.mp3",
+    "audio": "assets/audio/Caribe/tortuguero.mp3",
     "video": "assets/video/tortuguero.mp4",
     "actividades": ["Paseo en bote", "Observación de tortugas", "Observación de aves", "Kayak", "Senderismo nocturno"],
     "lat": 10.5432,
