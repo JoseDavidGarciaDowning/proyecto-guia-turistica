@@ -26,11 +26,12 @@ export class AppHeader extends HTMLElement {
 
         .glass-nav {
           padding: 1rem 0;
-          box-shadow: var(--shadow-ambient);
-          /* Añadimos el fondo glassmorphism para que la barra se vea elegante */
-          background-color: rgba(18, 28, 20, 0.6);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
+          /* Glass neutro (negro frío) en vez del verde anterior: aire premium.
+             El saturate() enriquece el frosted glass. Sin borde ni glow:
+             el header se funde limpio con el contenido (look seamless). */
+          background-color: rgba(7, 9, 14, 0.78);
+          backdrop-filter: blur(16px) saturate(120%);
+          -webkit-backdrop-filter: blur(16px) saturate(120%);
         }
 
         .container {
