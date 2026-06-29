@@ -12,7 +12,7 @@
       "assets/img/caribe/cahuita-mono.jpg"
     ],
     "audio": "assets/audio/Caribe/cahuita.mp3",
-    "video": "assets/video/cahuita.mp4",
+    "video": "assets/video/caribe/cahuita.mp4",
     "actividades": [
       "Snorkel",
       "Senderismo",
@@ -38,7 +38,7 @@
       "assets/img/caribe/puerto-viejo-bicicleta.jpg"
     ],
     "audio": "assets/audio/Caribe/puerto-viejo.mp3",
-    "video": "assets/video/puerto-viejo.mp4",
+    "video": "assets/video/caribe/puerto-viejo.mp4",
     "actividades": [
       "Surf",
       "Snorkel",
@@ -65,7 +65,7 @@
       "assets/img/caribe/tortuguero-aves.jpg"
     ],
     "audio": "assets/audio/Caribe/tortuguero.mp3",
-    "video": "assets/video/tortuguero.mp4",
+    "video": "assets/video/caribe/tortuguero.mp4",
     "actividades": [
       "Paseo en bote",
       "Observación de tortugas",
