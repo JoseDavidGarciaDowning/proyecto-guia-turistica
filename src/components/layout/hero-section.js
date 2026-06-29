@@ -60,15 +60,15 @@ export class HeroSection extends HTMLElement {
         
         <div class="content">
           <h1>
-            Where Nature <br/>
-            <span class="text-primary">Meets Wonder</span>
+            Donde la Naturaleza <br/>
+            <span class="text-primary">Despierta el Asombro</span>
           </h1>
           <p>
-            Explore Hidden Wonders with Eco-Friendly Tours Pura Vida: Adventure, Wildlife, Relaxation & Sustainable Luxury.
+            Descubrí maravillas escondidas con tours ecológicos Pura Vida: aventura, vida silvestre, relajación y lujo sostenible.
           </p>
           <div class="btn-group">
-            <base-button variant="primary">Get Inspired</base-button>
-            <base-button variant="secondary">Start Planning</base-button>
+            <base-button variant="primary">Inspirate</base-button>
+            <base-button variant="secondary">Empezá a Planear</base-button>
           </div>
         </div>
       </div>

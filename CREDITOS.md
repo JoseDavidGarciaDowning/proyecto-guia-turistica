@@ -153,3 +153,5 @@
 
 - **Imagen URL**: https://l.icdbcdn.com/oh/f9e5810a-1f6d-43fa-a4b5-6876f90df605.jpg?w=1920
   - **Créditos a**: https://canavidaresort.com/
+
+- **Audios**: Efectos de sonido por freesound_community y Vishal Yadov de Pixabay.

@@ -11,9 +11,15 @@
       "assets/img/caribe/cahuita-arrecife.jpg",
       "assets/img/caribe/cahuita-mono.jpg"
     ],
-    "audio": "assets/audio/cahuita-guia.mp3",
+    "audio": "assets/audio/Caribe/cahuita.mp3",
     "video": "assets/video/cahuita.mp4",
-    "actividades": ["Snorkel", "Senderismo", "Observación de fauna", "Fotografía", "Natación"],
+    "actividades": [
+      "Snorkel",
+      "Senderismo",
+      "Observación de fauna",
+      "Fotografía",
+      "Natación"
+    ],
     "lat": 9.7369,
     "lng": -82.8411,
     "cx": 815,
@@ -31,9 +37,16 @@
       "assets/img/caribe/puerto-viejo-pueblo.jpg",
       "assets/img/caribe/puerto-viejo-bicicleta.jpg"
     ],
-    "audio": "assets/audio/puerto-viejo-guia.mp3",
+    "audio": "assets/audio/Caribe/puerto-viejo.mp3",
     "video": "assets/video/puerto-viejo.mp4",
-    "actividades": ["Surf", "Snorkel", "Ciclismo", "Vida nocturna", "Gastronomía caribeña", "Cultura Bribri"],
+    "actividades": [
+      "Surf",
+      "Snorkel",
+      "Ciclismo",
+      "Vida nocturna",
+      "Gastronomía caribeña",
+      "Cultura Bribri"
+    ],
     "lat": 9.6545,
     "lng": -82.7534,
     "cx": 838,
@@ -51,9 +64,15 @@
       "assets/img/caribe/tortuguero-selva.jpg",
       "assets/img/caribe/tortuguero-aves.jpg"
     ],
-    "audio": "assets/audio/tortuguero-guia.mp3",
+    "audio": "assets/audio/Caribe/tortuguero.mp3",
     "video": "assets/video/tortuguero.mp4",
-    "actividades": ["Paseo en bote", "Observación de tortugas", "Observación de aves", "Kayak", "Senderismo nocturno"],
+    "actividades": [
+      "Paseo en bote",
+      "Observación de tortugas",
+      "Observación de aves",
+      "Kayak",
+      "Senderismo nocturno"
+    ],
     "lat": 10.5432,
     "lng": -83.5024,
     "cx": 748,
@@ -73,7 +92,14 @@
     ],
     "audio": "assets/audio/playa.mp3",
     "video": "assets/video/tamarindo.mp4",
-    "actividades": ["Surf", "Kayak en manglares", "Observación de tortugas", "Pesca deportiva", "Vida nocturna", "Paseo a caballo"],
+    "actividades": [
+      "Surf",
+      "Kayak en manglares",
+      "Observación de tortugas",
+      "Pesca deportiva",
+      "Vida nocturna",
+      "Paseo a caballo"
+    ],
     "lat": 10.2994,
     "lng": -85.8375,
     "cx": 205,
@@ -93,7 +119,13 @@
     ],
     "audio": "assets/audio/Bosque.mp3",
     "video": "assets/video/rincon-vieja.mp4",
-    "actividades": ["Senderismo", "Aguas termales", "Observación de fauna", "Fotografía volcánica", "Canopy"],
+    "actividades": [
+      "Senderismo",
+      "Aguas termales",
+      "Observación de fauna",
+      "Fotografía volcánica",
+      "Canopy"
+    ],
     "lat": 10.8300,
     "lng": -85.3240,
     "cx": 310,
@@ -113,7 +145,13 @@
     ],
     "audio": "assets/audio/playa.mp3",
     "video": "assets/video/conchal.mp4",
-    "actividades": ["Snorkel", "Natación", "Buceo", "Caminata costera", "Fotografía"],
+    "actividades": [
+      "Snorkel",
+      "Natación",
+      "Buceo",
+      "Caminata costera",
+      "Fotografía"
+    ],
     "lat": 10.4076,
     "lng": -85.8171,
     "cx": 188,
@@ -132,8 +170,14 @@
       "assets/img/central/poas-sendero.jpg"
     ],
     "audio": "assets/audio/volcan-poas-guia.mp3",
-    "video": "assets/video/volcan-poas.mp4",
-    "actividades": ["Senderismo", "Observación del cráter", "Fotografía", "Observación de aves", "Visita a cafetales"],
+    "video": "assets/video/central/volcan-poas.mp4",
+    "actividades": [
+      "Senderismo",
+      "Observación del cráter",
+      "Fotografía",
+      "Observación de aves",
+      "Visita a cafetales"
+    ],
     "lat": 10.1968,
     "lng": -84.2306,
     "cx": 560,
@@ -152,8 +196,15 @@
       "assets/img/central/orosi-aguas-termales.jpg"
     ],
     "audio": "assets/audio/valle-orosi-guia.mp3",
-    "video": "assets/video/valle-orosi.mp4",
-    "actividades": ["Aguas termales", "Ciclismo", "Paseo en bote", "Visita histórica", "Senderismo", "Pesca de truchas"],
+    "video": "assets/video/central/valle-orosi.mp4",
+    "actividades": [
+      "Aguas termales",
+      "Ciclismo",
+      "Paseo en bote",
+      "Visita histórica",
+      "Senderismo",
+      "Pesca de truchas"
+    ],
     "lat": 9.7978,
     "lng": -83.8524,
     "cx": 680,
@@ -172,8 +223,14 @@
       "assets/img/central/irazu-flora.jpg"
     ],
     "audio": "assets/audio/volcan-irazu-guia.mp3",
-    "video": "assets/video/volcan-irazu.mp4",
-    "actividades": ["Senderismo", "Fotografía", "Observación del cráter", "Visita a cultivos de fresas", "Mirador panorámico"],
+    "video": "assets/video/central/volcan-irazu.mp4",
+    "actividades": [
+      "Senderismo",
+      "Fotografía",
+      "Observación del cráter",
+      "Visita a cultivos de fresas",
+      "Mirador panorámico"
+    ],
     "lat": 9.9792,
     "lng": -83.8521,
     "cx": 700,
@@ -191,9 +248,16 @@
       "assets/img/pacifico-sur/manuel-antonio-sendero.jpg",
       "assets/img/pacifico-sur/manuel-antonio-vista-aerea.jpg"
     ],
-    "audio": "assets/audio/manuel-antonio-guia.mp3",
+    "audio": "assets/audio/manuel-antonio-playa.mp3",
     "video": "assets/video/manuel-antonio.mp4",
-    "actividades": ["Senderismo", "Natación", "Observación de fauna", "Snorkel", "Kayak", "Pesca deportiva"],
+    "actividades": [
+      "Senderismo",
+      "Natación",
+      "Observación de fauna",
+      "Snorkel",
+      "Kayak",
+      "Pesca deportiva"
+    ],
     "lat": 9.3920,
     "lng": -84.1369,
     "cx": 498,
@@ -211,9 +275,16 @@
       "assets/img/pacifico-sur/uvita-cataratas-nauyaca.jpg",
       "assets/img/pacifico-sur/uvita-playa.jpg"
     ],
-    "audio": "assets/audio/uvita-guia.mp3",
+    "audio": "assets/audio/uvita-ballenas.mp3",
     "video": "assets/video/uvita.mp4",
-    "actividades": ["Avistamiento de ballenas", "Snorkel", "Surf", "Kayak", "Caminata al tómbolo", "Canyoning"],
+    "actividades": [
+      "Avistamiento de ballenas",
+      "Snorkel",
+      "Surf",
+      "Kayak",
+      "Caminata al tómbolo",
+      "Canyoning"
+    ],
     "lat": 9.1636,
     "lng": -83.7356,
     "cx": 530,
@@ -231,9 +302,16 @@
       "assets/img/pacifico-sur/corcovado-playa.jpg",
       "assets/img/pacifico-sur/bahia-drake-isla-cano.jpg"
     ],
-    "audio": "assets/audio/corcovado-guia.mp3",
+    "audio": "assets/audio/corcovado-jungla.mp3",
     "video": "assets/video/corcovado.mp4",
-    "actividades": ["Senderismo", "Buceo", "Snorkel", "Observación de fauna", "Kayak", "Fotografía de naturaleza"],
+    "actividades": [
+      "Senderismo",
+      "Buceo",
+      "Snorkel",
+      "Observación de fauna",
+      "Kayak",
+      "Fotografía de naturaleza"
+    ],
     "lat": 8.5338,
     "lng": -83.5851,
     "cx": 610,

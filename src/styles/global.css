@@ -3,6 +3,7 @@
   --color-primary: #4de082;
   --color-primary-rgb: 77, 224, 130;
   --color-background: #0e1511;
+  --color-hero-deep: #022c19; /* Verde profundo del overlay del hero — usado para fundir hero → contenido */
   --color-surface-lowest: #09100c;
   --color-surface: #0e1511;
   --color-surface-dim: #131b16;
@@ -126,4 +127,17 @@ h1, h2, h3, h4, .headline {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--spacing-6);
+}
+
+/* Puente de transición hero → contenido.
+   Arranca con el mismo verde profundo en el que termina el overlay del hero
+   (--color-hero-deep) y se funde suavemente hacia el fondo de la página, para
+   que NO haya un corte brusco verde → negro al pasar a "Explora el País".
+   Es full-bleed (ancho completo): el contenido va dentro de un .container interno. */
+.section-hero-fade {
+  background: linear-gradient(
+    to bottom,
+    var(--color-hero-deep) 0,
+    var(--color-background) 32rem
+  );
 }
