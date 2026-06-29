@@ -91,7 +91,7 @@
       "assets/img/guanacaste/tamarindo-tortuga-baula.jpg"
     ],
     "audio": "assets/audio/playa.mp3",
-    "video": "assets/video/tamarindo.mp4",
+    "video": "assets/video/guanacaste/tamarindo.mp4",
     "actividades": [
       "Surf",
       "Kayak en manglares",
@@ -118,7 +118,7 @@
       "assets/img/guanacaste/rincon-vieja-sendero.jpg"
     ],
     "audio": "assets/audio/Bosque.mp3",
-    "video": "assets/video/rincon-vieja.mp4",
+    "video": "assets/video/guanacaste/rincon-vieja.mp4",
     "actividades": [
       "Senderismo",
       "Aguas termales",
@@ -144,7 +144,7 @@
       "assets/img/guanacaste/conchal-panoramica.jpg"
     ],
     "audio": "assets/audio/playa.mp3",
-    "video": "assets/video/conchal.mp4",
+    "video": "assets/video/guanacaste/conchal.mp4",
     "actividades": [
       "Snorkel",
       "Natación",
