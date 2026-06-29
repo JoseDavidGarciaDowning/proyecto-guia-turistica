@@ -249,7 +249,7 @@
       "assets/img/pacifico-sur/manuel-antonio-vista-aerea.jpg"
     ],
     "audio": "assets/audio/manuel-antonio-playa.mp3",
-    "video": "assets/video/manuel-antonio.mp4",
+    "video": "assets/video/pacifico-sur/manuel-antonio.mp4",
     "actividades": [
       "Senderismo",
       "Natación",
@@ -276,7 +276,7 @@
       "assets/img/pacifico-sur/uvita-playa.jpg"
     ],
     "audio": "assets/audio/uvita-ballenas.mp3",
-    "video": "assets/video/uvita.mp4",
+    "video": "assets/video/pacifico-sur/uvita.mp4",
     "actividades": [
       "Avistamiento de ballenas",
       "Snorkel",
@@ -303,7 +303,7 @@
       "assets/img/pacifico-sur/bahia-drake-isla-cano.jpg"
     ],
     "audio": "assets/audio/corcovado-jungla.mp3",
-    "video": "assets/video/corcovado.mp4",
+    "video": "assets/video/pacifico-sur/corcovado.mp4",
     "actividades": [
       "Senderismo",
       "Buceo",
