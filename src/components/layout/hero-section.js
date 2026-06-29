@@ -76,8 +76,8 @@ export class HeroSection extends HTMLElement {
             Descubrí maravillas escondidas con tours ecológicos Pura Vida: aventura, vida silvestre, relajación y lujo sostenible.
           </p>
           <div class="btn-group">
-            <base-button variant="primary">Inspirate</base-button>
-            <base-button variant="secondary">Empezá a Planear</base-button>
+            <base-button variant="primary" href="#explorar">Inspirate</base-button>
+            <base-button variant="secondary" href="#explorar">Empezá a Planear</base-button>
           </div>
         </div>
       </div>

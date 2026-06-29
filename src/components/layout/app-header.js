@@ -87,12 +87,12 @@ export class AppHeader extends HTMLElement {
           
           <div class="nav-links">
             <a href="#" class="link-active">Inicio</a>
-            <a href="#" class="link-inactive">Experiencias</a>
-            <a href="#" class="link-inactive">Destinos</a>
+            <a href="#explorar" class="link-inactive">Experiencias</a>
+            <a href="#explorar" class="link-inactive">Destinos</a>
           </div>
 
           <!-- Usamos la clase global o, si ya tienes un base-button, podrías usarlo aquí -->
-          <button class="btn-primary">Planea tu viaje</button>
+          <a href="#explorar" class="btn-primary">Planea tu viaje</a>
         </div>
       </nav>
     `);
