@@ -12,13 +12,13 @@ export default class InteractiveMap extends HTMLElement {
     this._destinos = [];
     this._svgPaths = {};
     this._provincias = {
-      CRG:  { nombre: 'Guanacaste', color: '#D4841A', cx: 300, cy: 180, zoom: 2.8 },
-      CRA:  { nombre: 'Alajuela',   color: '#2E86DE', cx: 500, cy: 160, zoom: 3.0 },
-      CRH:  { nombre: 'Heredia',    color: '#8E44AD', cx: 620, cy: 185, zoom: 4.5 },
-      CRSJ: { nombre: 'San José',   color: '#27AE60', cx: 590, cy: 310, zoom: 3.5 },
-      CRC:  { nombre: 'Cartago',    color: '#E85D4A', cx: 680, cy: 280, zoom: 4.0 },
-      CRL:  { nombre: 'Limón',      color: '#1ABC9C', cx: 780, cy: 280, zoom: 2.2 },
-      CRP:  { nombre: 'Puntarenas', color: '#E67E22', cx: 420, cy: 400, zoom: 1.6 },
+      CRG:  { nombre: 'Guanacaste', color: '#D4841A', cx: 350, cy: 210, zoom: 2.5 },
+      CRA:  { nombre: 'Alajuela',   color: '#2E86DE', cx: 490, cy: 155, zoom: 3.0 },
+      CRH:  { nombre: 'Heredia',    color: '#8E44AD', cx: 615, cy: 185, zoom: 4.5 },
+      CRSJ: { nombre: 'San José',   color: '#27AE60', cx: 580, cy: 285, zoom: 3.5 },
+      CRC:  { nombre: 'Cartago',    color: '#E85D4A', cx: 668, cy: 280, zoom: 4.0 },
+      CRL:  { nombre: 'Limón',      color: '#1ABC9C', cx: 745, cy: 290, zoom: 2.2 },
+      CRP:  { nombre: 'Puntarenas', color: '#E67E22', cx: 580, cy: 430, zoom: 1.4 },
     };
 
     // Initialize sub-components via Composition pattern
