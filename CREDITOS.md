@@ -89,6 +89,18 @@
 - **Imagen URL**: https://www.nacion.com/resizer/v2/723RUNLPHNAIDB6DHH52XSUPSI.jpg
   - **Créditos a**: Grupo Nación GN S.A.
 
+- **Video URL**: https://www.pexels.com/es-es/video/paisaje-naturaleza-cielo-nubes-11181918/
+  - **Destino**: Parque Nacional Rincón de la Vieja
+  - **Créditos a**: Pexels
+
+- **Video URL**: https://www.pexels.com/es-es/video/29805582/
+  - **Destino**: Playa Conchal
+  - **Créditos a**: Pexels
+
+- **Video URL**: https://www.pexels.com/es-es/video/35145340/
+  - **Destino**: Playa Tamarindo
+  - **Créditos a**: Pexels
+
 
 ## Caribe 
 
