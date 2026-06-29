@@ -33,8 +33,9 @@ export class MapTooltip {
     const s   = this.map.camera.s;
 
     // Convert SVG viewBox coords → unscaled cam-space pixels
-    const pinCamX = destino.cx / 1000 * vpW;
-    const pinCamY = destino.cy / 560  * vpH;
+    // viewBox is "140 40 840 570": starts at (140,40), spans 840×570 units
+    const pinCamX = (destino.cx - 140) / 840 * vpW;
+    const pinCamY = (destino.cy - 40)  / 570 * vpH;
 
     // 1. Pan to center the marker
     const targetX = vpW * 0.5 / s - pinCamX;

@@ -17,10 +17,10 @@ export class MapRenderer {
       if (d) provPaths += `<path class="prov" data-p="${key}" d="${d}"/>`;
     }
 
-    // Province labels
+    // Province labels — coordenadas exactas del SVG de referencia (simplemaps)
     const labels = {
-      CRG: [290, 175], CRA: [500, 150], CRH: [625, 178],
-      CRSJ: [580, 295], CRC: [680, 270], CRL: [780, 280], CRP: [420, 400]
+      CRG: [412, 157], CRA: [554, 139], CRH: [630, 171],
+      CRSJ: [596, 275], CRC: [682, 271], CRL: [765, 299], CRP: [749, 401]
     };
     let provLabels = '';
     for (const [key, [x, y]] of Object.entries(labels)) {
@@ -43,10 +43,10 @@ export class MapRenderer {
       <div class="wrap">
         <div class="vp" id="vp">
           <div class="cam" id="cam">
-            <svg id="m" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg">
-              <rect width="1000" height="560" fill="#0a1f14"/>
-              <text class="ol" x="820" y="50">Mar Caribe</text>
-              <text class="ol" x="60" y="540">Océano Pacífico</text>
+            <svg id="m" viewBox="140 40 840 570" xmlns="http://www.w3.org/2000/svg">
+              <rect x="140" y="40" width="840" height="570" fill="#0a1f14"/>
+              <text class="ol" x="880" y="68">Mar Caribe</text>
+              <text class="ol" x="190" y="595">Océano Pacífico</text>
               <g>${provPaths}</g>
               <g>${provLabels}</g>
               <g>${pins}</g>
@@ -77,22 +77,29 @@ export class MapRenderer {
   _css() {
     return /*css*/`
       :host { display: block; width: 100%; border-radius: var(--radius-xl, 16px); overflow: hidden; }
-      .wrap { position: relative; width: 100%; height: min(560px, 56vw); min-height: 240px; background: #0a1f14; }
-      @media (width <= 700px) { .wrap { height: min(400px, 75vw); } }
+      .wrap { position: relative; width: 100%; aspect-ratio: 840 / 570; max-height: 570px; min-height: 260px; background: #0a1f14; }
+      @media (width <= 700px) { .wrap { max-height: none; } }
       .vp { width: 100%; height: 100%; cursor: grab; overflow: hidden; touch-action: none; user-select: none; }
       .vp.dragging { cursor: grabbing; }
       .cam { width: 100%; height: 100%; transform-origin: 0 0; transition: transform 0.4s ease; }
       .cam.no-transition { transition: none; }
       svg { width: 100%; height: 100%; display: block; }
-      .prov { fill: #1e5a34; stroke: rgba(168,213,162,.2); stroke-width: 1; transition: fill .4s, stroke .4s; cursor: pointer; }
+      .prov { fill: #1e5a34; stroke: rgba(168,213,162,.15); stroke-width: 1; transition: fill .4s, stroke .4s, filter .4s; cursor: pointer; }
+      .prov[data-p="CRG"]  { fill: #4a5c25; }
+      .prov[data-p="CRA"]  { fill: #1f3f58; }
+      .prov[data-p="CRH"]  { fill: #3a2555; }
+      .prov[data-p="CRSJ"] { fill: #1e5a34; }
+      .prov[data-p="CRC"]  { fill: #6b2020; }
+      .prov[data-p="CRL"]  { fill: #1a4a3a; }
+      .prov[data-p="CRP"]  { fill: #5c3d10; }
       @media (hover: hover) {
-        .prov:hover { fill: #2a7a48; stroke: rgba(168,213,162,.45); }
+        .prov:hover { filter: brightness(1.4); stroke: rgba(168,213,162,.45); }
       }
       .prov:focus  { outline: none; }
       .prov        { -webkit-tap-highlight-color: transparent; }
-      .prov.active { stroke: rgba(94,196,160,.6); stroke-width: 2; filter: brightness(1.25) drop-shadow(0 0 12px rgba(94,196,160,.35)); }
-      .pl { font-family: 'DM Sans', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: rgba(168,213,162,.35); pointer-events: none; text-anchor: middle; letter-spacing: .06em; text-transform: uppercase; transition: fill .4s; }
-      .pl.active { fill: rgba(232,239,227,.85); }
+      .prov.active { stroke: rgba(94,196,160,.7); stroke-width: 2; filter: brightness(1.35) drop-shadow(0 0 14px rgba(94,196,160,.4)); }
+      .pl { font-family: 'DM Sans', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: rgba(220,240,210,.75); pointer-events: none; text-anchor: middle; letter-spacing: .06em; text-transform: uppercase; transition: fill .4s; }
+      .pl.active { fill: rgba(255,255,255,.95); }
       .ol { font-family: 'DM Sans', system-ui, sans-serif; font-size: 10px; font-weight: 500; fill: rgba(94,196,160,.12); letter-spacing: .25em; text-transform: uppercase; pointer-events: none; }
       .pin { cursor: pointer; -webkit-tap-highlight-color: transparent; }
       .pin-dot { stroke: #0a1f14; stroke-width: 1.5; transition: r .25s; }
