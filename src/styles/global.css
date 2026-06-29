@@ -39,6 +39,10 @@
   --radius-full: 9999px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -85,6 +89,7 @@ h1, h2, h3, h4, .headline {
   justify-content: center;
   background-color: var(--color-primary);
   color: #003919;
+  text-decoration: none;
   font-family: var(--font-body);
   font-weight: 700;
   border-radius: var(--radius-full);
