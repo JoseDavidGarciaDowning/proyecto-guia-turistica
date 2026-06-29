@@ -53,6 +53,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+hero-section {
+  display: block;
+  min-height: max(921px, 100vh);
+}
+
 /* Typography styles */
 h1, h2, h3, h4, .headline {
   font-family: var(--font-headline);
