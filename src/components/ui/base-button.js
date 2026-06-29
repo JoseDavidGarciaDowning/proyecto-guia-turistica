@@ -4,18 +4,31 @@ export class BaseButton extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.cssReady = this.#loadStyles();
+  }
+
+  async #loadStyles() {
+    const [sharedCSS, buttonCSS] = await Promise.all([
+      fetch(new URL('../../styles/components/shared.css', import.meta.url)).then(r => r.text()),
+      fetch(new URL('../../styles/components/button.css', import.meta.url)).then(r => r.text()),
+    ]);
+    const sheet = new CSSStyleSheet();
+    await sheet.replace(sharedCSS + '\n' + buttonCSS);
+    this.shadowRoot.adoptedStyleSheets = [sheet];
   }
 
   static get observedAttributes() {
     return ['variant', 'href'];
   }
 
-  connectedCallback() {
+  async connectedCallback() {
+    await this.cssReady;
     this.render();
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
+  async attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue !== newValue) {
+      await this.cssReady;
       this.render();
     }
   }
@@ -28,16 +41,12 @@ export class BaseButton extends HTMLElement {
     // Si tiene href, renderizamos un link; si no, un botón.
     if (href) {
       this.shadowRoot.setHTMLUnsafe(html`
-        <style>@import url('./src/styles/components/shared.css');</style>
-        <style>@import url('./src/styles/components/button.css');</style>
         <a href="${href}" class="${className}" part="button">
           <slot></slot>
         </a>
       `);
     } else {
       this.shadowRoot.setHTMLUnsafe(html`
-        <style>@import url('./src/styles/components/shared.css');</style>
-        <style>@import url('./src/styles/components/button.css');</style>
         <button class="${className}" part="button">
           <slot></slot>
         </button>
