@@ -170,7 +170,7 @@
       "assets/img/central/poas-sendero.jpg"
     ],
     "audio": "assets/audio/volcan-poas-guia.mp3",
-    "video": "assets/video/volcan-poas.mp4",
+    "video": "assets/video/central/volcan-poas.mp4",
     "actividades": [
       "Senderismo",
       "Observación del cráter",
@@ -196,7 +196,7 @@
       "assets/img/central/orosi-aguas-termales.jpg"
     ],
     "audio": "assets/audio/valle-orosi-guia.mp3",
-    "video": "assets/video/valle-orosi.mp4",
+    "video": "assets/video/central/valle-orosi.mp4",
     "actividades": [
       "Aguas termales",
       "Ciclismo",
@@ -223,7 +223,7 @@
       "assets/img/central/irazu-flora.jpg"
     ],
     "audio": "assets/audio/volcan-irazu-guia.mp3",
-    "video": "assets/video/volcan-irazu.mp4",
+    "video": "assets/video/central/volcan-irazu.mp4",
     "actividades": [
       "Senderismo",
       "Fotografía",
